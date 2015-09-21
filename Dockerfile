@@ -1,7 +1,7 @@
 ######################################################################
 # phusion/baseimage image and setup
 
-FROM phusion/baseimage:latest
+FROM phusion/baseimage:0.9.17
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
@@ -18,7 +18,7 @@ EXPOSE 80
 RUN apt-get update -y
 
 # Install apache
-RUN apt-get install -y apache2
+RUN apt-get install -y apache2 php5 php-pear
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
