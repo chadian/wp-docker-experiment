@@ -18,7 +18,12 @@ EXPOSE 80
 RUN apt-get update -y
 
 # Install apache
-RUN apt-get install -y apache2 php5 php-pear mysql-server php5-mysql
+RUN apt-get install -y \
+	apache2 \
+	php5 \
+	php-pear \
+	mysql-server \
+	php5-mysql
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
