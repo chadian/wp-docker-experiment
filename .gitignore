@@ -1,2 +1,8 @@
+# apache-specific configuration
+.htaccess
+
 # mysql database storage
 .docker/mysql/storage
+
+# wordpress configuration
+wp-config.php
